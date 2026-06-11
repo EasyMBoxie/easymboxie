@@ -41,19 +41,46 @@ Auto 화면에서는 위 흐름을 한 번에 실행하는 방향을, OCR과 Pub
 배포 파일 이름은 다음 형식을 사용합니다.
 
 ```text
+EasyMBoxie-v0.0.7-windows-x64-setup.exe
+EasyMBoxie-v0.0.7-windows-x64-portable.exe
 EasyMBoxie-v0.0.7-windows-x64.zip
-EasyMBoxie-v0.0.7-windows-x64.exe
 SHA256SUMS.txt
 ```
+
+일반적인 사용에는 설치형을 권장합니다. 설치 없이 먼저 실행해보고 싶다면 포터블 버전을 사용해 주세요.
 
 Release에 첨부된 파일만 공식 배포 파일로 간주해 주세요.
 
 ## 실행 환경
 
-- Windows x64
-- 최초 실행 시 OCR에 필요한 로컬 Python/OCR 런타임 준비가 필요할 수 있습니다.
-- GPU 가속은 선택 사항이며, GPU 환경이 준비되지 않아도 CPU OCR로 사용할 수 있도록 설계되어 있습니다.
+- Windows x64 환경을 기준으로 배포합니다.
+- 최초 실행 시 OCR에 필요한 로컬 Python/OCR 런타임 설치가 필요합니다.
+- 앱 실행 후 `Settings > OCR 설정`에서 CPU OCR 환경을 먼저 설치해 주세요.
 - AI 초안 생성, Google Vision 보정, WordPress 게시 기능은 사용자가 직접 API 키 또는 연결 정보를 설정해야 합니다.
+
+## 권장 사양
+
+EasyMBoxie는 CPU 환경에서도 기본 OCR과 검수 흐름을 사용할 수 있도록 설계되어 있습니다. 다만 이미지, 표, 문서 구조 분석처럼 무거운 고급 기능을 충분히 사용하려면 NVIDIA GPU 환경을 권장합니다.
+
+### 최소 사용 환경
+
+- Windows 10/11 x64
+- 로컬 저장 공간 여유분
+- CPU OCR 런타임 설치
+- 인터넷 연결: 최초 OCR 런타임 설치, AI/Google Vision/WordPress 연동 사용 시 필요
+
+### 권장 사용 환경
+
+- Windows 10/11 x64
+- NVIDIA GPU
+- 최신 NVIDIA 그래픽 드라이버
+- 앱 내 CPU OCR 환경 설치
+- 앱 내 GPU OCR 환경 설치
+- 충분한 메모리와 저장 공간
+
+NVIDIA GPU 환경에서는 PaddleOCR-VL 기반 문서 구조 인식, 이미지 후보 찾기, 표/이미지 영역 분석 같은 고급 기능을 더 원활하게 사용할 수 있습니다. GPU 환경이 준비되지 않아도 CPU OCR로 기본 기능은 사용할 수 있지만, 일부 고급 분석 기능은 느리거나 사용성이 제한될 수 있습니다.
+
+설치 후 `Settings > OCR 설정`에서 CPU/GPU OCR 환경을 모두 준비하는 것을 권장합니다.
 
 Windows SmartScreen 또는 백신 프로그램이 새 실행 파일에 대해 경고를 표시할 수 있습니다. 공식 Release 페이지에서 받은 파일인지 확인한 뒤 실행해 주세요.
 
