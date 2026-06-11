@@ -9,7 +9,7 @@ EasyMBoxie 공개 배포판의 주요 변경 사항을 기록합니다.
 ### 추가
 
 - 공개 배포 및 피드백 수집용 저장소 구성
-- 이미지/PDF 등록, OCR 실행, 검수, Publish, WordPress 게시로 이어지는 기본 제품 설명 정리
+- 이미지/PDF 등록, OCR 실행, 검수, Publish, WordPress 게시로 이어지는 기본 앱 설명 정리
 - GitHub Releases 기반 실행 파일 배포 안내
 - 바이너리 평가판 사용 허가서 추가
 
